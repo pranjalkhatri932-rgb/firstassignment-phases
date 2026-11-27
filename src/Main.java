@@ -1,9 +1,11 @@
 
-
+//start of phase 1
 import java.util.Scanner;
 
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
+
+
     public static void main(String[] args) {
         System.out.print("Welcome to the Galatic Bureau of Intersteller Tourism traveller\n");
         System.out.print("This is the place where your journey through the universe begins\n");
@@ -17,19 +19,53 @@ public class Main {
         String planet = scan.nextLine();
 
         System.out.print("Welcome " + name + " from " + planet);
-
-        System.out.print("whats the temperature in that planet? ");
+        System.out.print("\n");
+        //end of phase 1
+        // start of phase 2
+        System.out.print("whats the temperature in that planet?");
         int temperature = Integer.parseInt(scan.nextLine());
 
-        if (temperature < 100 && temperature > -50 ) {
-            System.out.print("This planet is safe to travel");
+
+        if (temperature < 100 && temperature > -50) {
+            System.out.print("This planet is safe to travel\n");
+
+        } else {
+            System.out.print(" it's to dangerous to travel there\n");
+
+
         }
-        else {
-            System.out.print(" it's to dangerous to travel there");
+
+        // end of phase 2
+
+        // start of phase 3
+        System.out.print("how comfortable is the planet:\n ");
+        int comfortRating = Integer.parseInt(scan.nextLine());
+
+
+        switch (comfortRating) {
+            case 1:
+            case 2:
+                System.out.println("Roughing it in the cosmos.");
+                break;
+
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("Quite Comfortable.");
+                break;
+
+            default:
+                System.out.println("Invalid comfort rating.");
         }
-
-
-
-
+                scan.close();
+        }
     }
-}
+
+
+
+
+
+
+
+
+
